@@ -19,6 +19,25 @@ describe("Tags", function(){
 		    expect(results).to.have.a.property("hello", "world");
 		});
 		
+		it("should accept short formed tags", function(){
+		    var args = ["-sd=4", "-h"];
+		    var replacements = {
+		        s: "searchContents",
+		        d: "depth",
+		        h: "hello"
+		    };
+		 
+		    var results = tags.parse(args, {}, replacements);
+		 
+		    var expected = {
+		        searchContents: true,
+		        depth: 4,
+		        hello: true
+		    };
+		 
+
+		});
+		
 		it("should fallback to defaults", function(){
 		    var args = ["--depth=4", "--hello=world"];
 		    var defaults = { depth: 2, foo: "bar" };
