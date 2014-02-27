@@ -2,11 +2,7 @@ var expect = require("chai").expect;
 var search = require("../lib/search.js");
 var fs = require("fs");
 
-exports = module.exports = {};
- 
-exports.scan = function(dir, depth, done) {
- 
-}
+
  
 describe("Search", function(){
    describe("#scan()", function(){
