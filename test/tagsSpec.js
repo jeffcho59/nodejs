@@ -9,6 +9,15 @@ describe("Tags", function(){
  
            expect(results).to.have.a.property("depth", 4);
            expect(results).to.have.a.property("hello", "world");
+           
+      
+		exports = module.exports = {};
+		
+		exports.parse = function() {
+		 
+		}
+		
        });
    });
 });
+
